@@ -11,8 +11,19 @@ namespace DataStorage.Constants
     /// </summary>
     public enum Dimensions
     {
+        /// <summary>
+        /// Represents one-dimensional type
+        /// </summary>
         OneDimensional = 1,
+
+        /// <summary>
+        /// Represents two-dimensional type
+        /// </summary>
         TwoDimensional,
+
+        /// <summary>
+        /// Represents three-dimensional type
+        /// </summary>
         ThreeDimenstional
     }
 }

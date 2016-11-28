@@ -9,9 +9,8 @@ namespace DataStorage.Models
     /// <typeparam name="T">Point coordinate type</typeparam>
     public class Point<T>
     {
-
         /// <summary>
-        /// Point type of this point
+        /// Gets the point type of this point
         /// </summary>
         public Dimensions PointType
         {

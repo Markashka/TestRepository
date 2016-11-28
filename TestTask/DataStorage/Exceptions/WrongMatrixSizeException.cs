@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataStorage.Exceptions
 {
-    public class WrongMatrixSizeException: Exception
+    /// <summary>
+    /// Wrong matrix size exception
+    /// </summary>
+    public class WrongMatrixSizeException : Exception
     {
     }
 }

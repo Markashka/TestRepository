@@ -12,11 +12,11 @@ namespace DataStorage.Models
     /// <summary>
     /// Indexed collection of points
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Type parameter</typeparam>
     public class Position<T> : IEnumerable<Point<T>>
     {
         /// <summary>
-        /// Point type of this position
+        /// Gets the point type of this position
         /// </summary>
         public Dimensions PointType
         {
@@ -34,9 +34,10 @@ namespace DataStorage.Models
         }
 
         /// <summary>
-        /// Gets or sets point list
+        /// Gets the point list
         /// </summary>
-        public Point<T>[] Points {
+        public Point<T>[] Points
+        {
             get;
             private set;
         }
@@ -98,8 +99,8 @@ namespace DataStorage.Models
         /// <summary>
         /// Sets point at specified position of this 
         /// </summary>
-        /// <param name="index">Integer in 0 and this positon length</param>
-        /// <param name="coordinates">New point coordinates</param>
+        /// <param name="index">Integer in 0 and this position length</param>
+        /// <param name="point">New point</param>
         internal void SetPoint(int index, Point<T> point)
         {
             if (this.Length > index
@@ -129,12 +130,13 @@ namespace DataStorage.Models
         /// <returns>IEnumerator of points</returns>
         public IEnumerator<Point<T>> GetEnumerator()
         {
-            foreach (var point in Points)
+            foreach (var point in this.Points)
             {
                 if (point == null)
                 {
                     break;
                 }
+
                 yield return point;
             }
         }

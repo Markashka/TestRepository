@@ -6,7 +6,11 @@ using DataStorage.Exceptions;
 
 namespace DataStorage.Models
 {
-    public class Matrix<T>: IEnumerable<Position<T>>
+    /// <summary>
+    /// Matrix class
+    /// </summary>
+    /// <typeparam name="T">Type parameter</typeparam>
+    public class Matrix<T> : IEnumerable<Position<T>>
     {
         /// <summary>
         /// Gets point type of this matrix
@@ -18,7 +22,7 @@ namespace DataStorage.Models
         }
 
         /// <summary>
-        /// gets length of each position in this matrix
+        /// Gets length of each position in this matrix
         /// </summary>
         public int[] PositionLength
         {
@@ -35,7 +39,6 @@ namespace DataStorage.Models
             private set;
         }
 
-
         /// <summary>
         /// Gets the positions collection
         /// </summary>
@@ -46,7 +49,7 @@ namespace DataStorage.Models
         }
 
         /// <summary>
-        /// Gets os sets positions at certain index
+        /// Gets or sets positions at certain index
         /// </summary>
         /// <param name="index">Position index</param>
         /// <returns>Position in specified position</returns>
@@ -89,7 +92,7 @@ namespace DataStorage.Models
             this.Length = length;
             this.PositionLength = positionLength;
             this.Positions = new Position<T>[this.Length];
-            for(int i = 0; i < this.Length; i++)
+            for (int i = 0; i < this.Length; i++)
             {
                 this.Positions[i] = new Position<T>(this.PositionLength[i], this.PointType);
             }
@@ -146,12 +149,13 @@ namespace DataStorage.Models
         /// <returns>IEnumerator of positions</returns>
         public IEnumerator<Position<T>> GetEnumerator()
         {
-            foreach (var position in Positions)
+            foreach (var position in this.Positions)
             {
                 if (position == null)
                 {
                     break;
                 }
+
                 yield return position;
             }
         }

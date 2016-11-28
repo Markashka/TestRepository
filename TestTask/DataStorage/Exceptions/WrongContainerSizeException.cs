@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataStorage.Exceptions
 {
-    public class WrongContainerSizeException: Exception
+    /// <summary>
+    /// Wrong container size exception
+    /// </summary>
+    public class WrongContainerSizeException : Exception
     {
     }
 }

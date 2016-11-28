@@ -9,17 +9,22 @@ using DataStorage.Exceptions;
 
 namespace DataStorage.Models
 {
-    public class Containers<T>: IEnumerable<Container<T>>
+    /// <summary>
+    /// Container class
+    /// </summary>
+    /// <typeparam name="T">Type parameter</typeparam>
+    public class Containers<T> : IEnumerable<Container<T>>
     {
         /// <summary>
         /// Gets number of containers
         /// </summary>
-        public int Length {
+        public int Length
+        {
             get
             {
-                if (Values != null)
+                if (this.Values != null)
                 {
-                    return Values.Count;
+                    return this.Values.Count;
                 }
                 else
                 {
@@ -108,7 +113,10 @@ namespace DataStorage.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="{Container<typeparamref name="T"}" /> class.
         /// </summary>
-        /// <param name="matrices">Matrices of this container</param>
+        /// <param name="matricesNumber">Matrices of this container</param>
+        /// <param name="matrixLengthes">Number of positions in each indexed matrix</param>
+        /// <param name="matrixPositionSizes">Number of points in each position of each indexed matrix</param>
+        /// <param name="pointTypes">Type of points in each  indexed matrix</param>
         internal Containers(int matricesNumber, int[] matrixLengthes, int[][] matrixPositionSizes, Dimensions[] pointTypes)
         {
             this.MatricesNumber = matricesNumber;
@@ -120,6 +128,7 @@ namespace DataStorage.Models
             {
                 throw new WrongContainerSizeException();
             }
+
             if (matrixLengthes.Length == matricesNumber)
             {
                 this.MartixLengthes = matrixLengthes;
@@ -128,6 +137,7 @@ namespace DataStorage.Models
             {
                 throw new WrongContainerSizeException();
             }
+
             if (matrixPositionSizes.GetLength(0) == matricesNumber)
             {
                 for (int i = 0; i < matricesNumber; i++)
@@ -137,19 +147,20 @@ namespace DataStorage.Models
                         throw new WrongMatrixSizeException();
                     }
                 }
+
                 this.MatricesPositionSizes = matrixPositionSizes;
             }
             else
             {
                 throw new WrongContainerSizeException();
             }
+
             this.Values = new List<Container<T>>();
         }
 
         /// <summary>
         /// Sets container at specified index
         /// </summary>
-        /// <param name="index">The index</param>
         /// <param name="container">New container</param>
         public void AddContainer(Container<T> container)
         {
@@ -178,12 +189,18 @@ namespace DataStorage.Models
             }
         }
 
+        /// <summary>
+        /// Defines whether matrices position sizes are equal 
+        /// </summary>
+        /// <param name="container">Container to check</param>
+        /// <returns>Boolean value</returns>
         private bool IsMatricesPositionSizesEqual(Container<T> container)
         {
             if (container.MatricesPositionSizes.GetLength(0) != this.MatricesNumber)
             {
                 return false;
             }
+
             for (int i = 0; i < container.MatricesPositionSizes.GetLength(0); i++)
             {
                 if (!container.MatricesPositionSizes[i].SequenceEqual(this.MatricesPositionSizes[i]))
@@ -191,6 +208,7 @@ namespace DataStorage.Models
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -200,12 +218,13 @@ namespace DataStorage.Models
         /// <returns>IEnumerator of containers</returns>
         public IEnumerator<Container<T>> GetEnumerator()
         {
-            foreach (var container in Values)
+            foreach (var container in this.Values)
             {
                 if (container == null)
                 {
                     break;
                 }
+
                 yield return container;
             }
         }

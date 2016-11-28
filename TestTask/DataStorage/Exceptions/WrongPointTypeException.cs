@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataStorage.Exceptions
 {
-    public class WrongPointTypeException: Exception
+    /// <summary>
+    /// Wrong point type exception
+    /// </summary>
+    public class WrongPointTypeException : Exception
     {
     }
 }

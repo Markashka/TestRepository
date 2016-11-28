@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataStorage.Exceptions
 {
-    public class WrongPositionSizeException: Exception
+    /// <summary>
+    /// Wrong position size exception
+    /// </summary>
+    public class WrongPositionSizeException : Exception
     {
     }
 }

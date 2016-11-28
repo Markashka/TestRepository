@@ -7,6 +7,10 @@ using DataStorage.Exceptions;
 
 namespace DataStorage.Models
 {
+    /// <summary>
+    /// Container class
+    /// </summary>
+    /// <typeparam name="T">Type parameter</typeparam>
     public class Container<T> : IEnumerable<Matrix<T>>
     {
         /// <summary>
@@ -26,6 +30,7 @@ namespace DataStorage.Models
             get;
             private set;
         }
+
         /// <summary>
         /// Gets number of position in each matrix of this container
         /// </summary>
@@ -45,7 +50,7 @@ namespace DataStorage.Models
         }
 
         /// <summary>
-        /// Matrices collection
+        /// Gets matrices collection
         /// </summary>
         public Matrix<T>[] Matrices
         {
@@ -62,9 +67,9 @@ namespace DataStorage.Models
         {
             get
             {
-                if (Matrices.Length > index && index >= 0)
+                if (this.Matrices.Length > index && index >= 0)
                 {
-                    return Matrices[index];
+                    return this.Matrices[index];
                 }
                 else
                 {
@@ -114,22 +119,24 @@ namespace DataStorage.Models
             if (matricesPositionSizes.GetLength(0) == this.Length)
             {
                 this.MatricesPositionSizes = matricesPositionSizes;
-
             }
             else
             {
                 throw new WrongContainerSizeException();
             }
+
             this.InitializeMatrices();
         }
 
-
+        /// <summary>
+        /// Initialize matrices in the collection
+        /// </summary>
         private void InitializeMatrices()
         {
             this.Matrices = new Matrix<T>[this.Length];
             for (int i = 0; i < this.Length; i++)
             {
-                this.Matrices[i] = new Matrix<T>( this.MatricesPositionNumber[i], this.MatricesPositionSizes[i], this.PointTypes[i]);
+                this.Matrices[i] = new Matrix<T>(this.MatricesPositionNumber[i], this.MatricesPositionSizes[i], this.PointTypes[i]);
             }
         }
 
@@ -190,12 +197,13 @@ namespace DataStorage.Models
         /// <returns>IEnumerator of matrices</returns>
         public IEnumerator<Matrix<T>> GetEnumerator()
         {
-            foreach (var matrix in Matrices)
+            foreach (var matrix in this.Matrices)
             {
                 if (matrix == null)
                 {
                     break;
                 }
+
                 yield return matrix;
             }
         }
