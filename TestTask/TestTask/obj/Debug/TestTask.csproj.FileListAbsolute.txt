@@ -1,0 +1,8 @@
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\bin\Debug\TestTask.exe.config
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\obj\Debug\TestTask.csprojResolveAssemblyReference.cache
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\bin\Debug\TestTask.exe
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\bin\Debug\TestTask.pdb
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\obj\Debug\TestTask.exe
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\obj\Debug\TestTask.pdb
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\bin\Debug\DataStorage.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\TestTask\bin\Debug\DataStorage.pdb

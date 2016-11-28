@@ -1,0 +1,8 @@
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\obj\Debug\DataStorageTest.csprojResolveAssemblyReference.cache
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\bin\Debug\DataStorageTest.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\bin\Debug\DataStorageTest.pdb
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\bin\Debug\DataStorage.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\bin\Debug\DataStorage.pdb
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\obj\Debug\DataStorageTest.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorageTest\obj\Debug\DataStorageTest.pdb

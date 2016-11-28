@@ -1,0 +1,5 @@
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorage\bin\Debug\DataStorage.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorage\bin\Debug\DataStorage.pdb
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorage\obj\Debug\DataStorage.csprojResolveAssemblyReference.cache
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorage\obj\Debug\DataStorage.dll
+C:\Users\Makiyan\Documents\Visual Studio 2015\Projects\TestTask\DataStorage\obj\Debug\DataStorage.pdb
